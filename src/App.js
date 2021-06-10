@@ -12,6 +12,7 @@ const App = () => {
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
         setPosts(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
